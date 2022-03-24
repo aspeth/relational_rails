@@ -12,7 +12,7 @@ RSpec.describe 'snowboards/:id' do
 
     expect(page).to have_content(insta_gator.name)
     expect(page).to have_content(insta_gator.powder_board)
-    expect(page).to have_content(never_summer.length)
+    expect(page).to have_content(insta_gator.length)
     expect(page).to_not have_content(process.name)
     expect(page).to_not have_content(process.powder_board)
     expect(page).to_not have_content(process.length)
