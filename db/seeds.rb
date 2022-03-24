@@ -5,4 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Snowboard.destroy_all
+Company.destroy_all
 
+never_summer = Company.create!(name: "Never Summer", based_in_co: true, year_founded: 1991)
+burton = Company.create!(name: "Burton", based_in_co: false, year_founded: 1977)
+
+never_summer.snowboards.create!(name: "InstaGator", powder_board: true, length: 156, company_id: never_summer)
+burton.snowboards.create!(name: "Process Flying V", powder_board: false, length: 157, company_id: burton)

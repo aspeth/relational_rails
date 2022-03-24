@@ -298,12 +298,20 @@
           1,
           2,
           null,
+          null,
+          1,
+          2,
+          2,
+          null,
           null
         ]
       },
       "/Users/andrewspeth/turing/2module/projects/snowboards/app/models/company.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
           1,
           null
         ]
@@ -323,12 +331,20 @@
           1,
           2,
           null,
+          null,
+          1,
+          2,
+          2,
+          null,
           null
         ]
       },
       "/Users/andrewspeth/turing/2module/projects/snowboards/app/models/snowboard.rb": {
         "lines": [
           1,
+          1,
+          1,
+          null,
           1,
           null
         ]
@@ -362,6 +378,6 @@
         ]
       }
     },
-    "timestamp": 1648091190
+    "timestamp": 1648143703
   }
 }
