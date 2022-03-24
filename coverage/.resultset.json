@@ -247,6 +247,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -256,7 +257,7 @@
           null
         ]
       },
-      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/company_id_spec.rb": {
+      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/companies/show_spec.rb": {
         "lines": [
           1,
           null,
@@ -277,7 +278,7 @@
           null
         ]
       },
-      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/snowboard_id_spec.rb": {
+      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/companies/snowboards/index_spec.rb": {
         "lines": [
           1,
           null,
@@ -288,9 +289,13 @@
           null,
           1,
           1,
+          1,
           null,
           1,
           null,
+          1,
+          1,
+          1,
           1,
           1,
           1,
@@ -301,7 +306,7 @@
           null
         ]
       },
-      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/snowboards_index_spec.rb": {
+      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/snowboards/index_spec.rb": {
         "lines": [
           1,
           null,
@@ -314,6 +319,30 @@
           1,
           null,
           1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/snowboards/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
           1,
           1,
           1,
@@ -421,6 +450,15 @@
           null
         ]
       },
+      "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/companies_snowboards_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/snowboards_controller.rb": {
         "lines": [
           1,
@@ -444,6 +482,6 @@
         ]
       }
     },
-    "timestamp": 1648156973
+    "timestamp": 1648158732
   }
 }

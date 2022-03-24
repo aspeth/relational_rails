@@ -1,0 +1,5 @@
+<% @company.snowboards.each do |snowboard| %>
+  <h3><%= snowboard.name %></h3>
+  <p>Rips in pow? <%= snowboard.powder_board %></p>
+  <p>Length <%= snowboard.length %></p>
+<% end %>
