@@ -252,6 +252,21 @@
           null
         ]
       },
+      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/welcome_index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/andrewspeth/turing/2module/projects/snowboards/spec/models/company_spec.rb": {
         "lines": [
           1,
@@ -311,6 +326,6 @@
         ]
       }
     },
-    "timestamp": 1648088025
+    "timestamp": 1648088291
   }
 }
