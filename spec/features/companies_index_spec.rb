@@ -7,10 +7,6 @@ RSpec.describe 'companies#index' do
 
     visit '/companies'
     expect(page).to have_content(company_1.name)
-    expect(page).to have_content(company_1.based_in_co)
-    expect(page).to have_content(company_1.year_founded)
     expect(page).to have_content(company_2.name)
-    expect(page).to have_content(company_2.based_in_co)
-    expect(page).to have_content(company_2.year_founded)
   end
 end
