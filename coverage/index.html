@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-23T20:28:38-06:00">2022-03-23T20:28:38-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-23T21:06:30-06:00">2022-03-23T21:06:30-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.04
+         1.03
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>24</b> files in total.
+    <b>25</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>71</b> relevant lines,
-    <span class="green"><b>71</b> lines covered</span> and
+    <b>86</b> relevant lines,
+    <span class="green"><b>86</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -84,9 +84,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f8d5de52907c6224607adb693a7539eb08b64bfa" class="src_link" title="app/controllers/companies_controller.rb">app/controllers/companies_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">9</td>
             <td class="cell--number">5</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -293,9 +293,20 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#16360d42e3b2a074a34276a6ea08ead258fada6a" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">5</td>
-            <td class="cell--number">3</td>
-            <td class="cell--number">3</td>
+            <td class="cell--number">6</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">4</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
+            
+          </tr>
+        
+          <tr class="t-file">
+            <td class="strong t-file__name"><a href="#a3d74c51e160bdf38fba80031f414e25947377d0" class="src_link" title="spec/features/company_id_spec.rb">spec/features/company_id_spec.rb</a></td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">12</td>
+            <td class="cell--number">12</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -418,8 +429,8 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>5</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -476,6 +487,50 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="5">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def show</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="7">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    @company = Company.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="8">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
             
             
 
@@ -3273,8 +3328,8 @@
     
 
     <div class="t-line-summary">
-      <b>3</b> relevant lines.
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines.
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -3330,7 +3385,236 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="5">
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  get &#39;/companies/:id&#39;, to: &#39;companies#show&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="6">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="a3d74c51e160bdf38fba80031f414e25947377d0">
+  <div class="header">
+    <h3>spec/features/company_id_spec.rb</h3>
+    <h4>
+      <span class="green">
+  100.0%
+</span>
+
+      lines covered
+    </h4>
+
+    
+
+    <div class="t-line-summary">
+      <b>12</b> relevant lines.
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+
+    
+
+  </div>
+
+  <pre>
+    <ol>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="1">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">require &#39;rails_helper&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="2">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">RSpec.describe &#39;company/:id&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;shows the information for the relevant company&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="5">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    company_1 = Company.create!(name: &quot;Never Summer&quot;, based_in_co: true, year_founded: 1991)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="6">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    company_2 = Company.create!(name: &quot;Burton&quot;, based_in_co: false, year_founded: 1977)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="7">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="8">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/companies/#{company_1.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="9">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="10">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(company_1.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="11">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(company_1.based_in_co)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(company_1.year_founded)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="13">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to_not have_content(company_2.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="14">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to_not have_content(company_2.based_in_co)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="15">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to_not have_content(company_2.year_founded)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="16">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 

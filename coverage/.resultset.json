@@ -244,12 +244,34 @@
           null,
           1,
           1,
+          1,
           null
         ]
       },
       "/Users/andrewspeth/turing/2module/projects/snowboards/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/features/company_id_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -317,6 +339,10 @@
           1,
           1,
           null,
+          null,
+          1,
+          1,
+          null,
           null
         ]
       },
@@ -336,6 +362,6 @@
         ]
       }
     },
-    "timestamp": 1648088918
+    "timestamp": 1648091190
   }
 }
