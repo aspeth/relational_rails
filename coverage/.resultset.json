@@ -242,12 +242,24 @@
         "lines": [
           1,
           null,
+          1,
           null
         ]
       },
       "/Users/andrewspeth/turing/2module/projects/snowboards/app/helpers/application_helper.rb": {
         "lines": [
           1,
+          null
+        ]
+      },
+      "/Users/andrewspeth/turing/2module/projects/snowboards/spec/models/company_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          null,
           null
         ]
       },
@@ -282,8 +294,23 @@
           1,
           null
         ]
+      },
+      "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/welcome_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1648072697
+    "timestamp": 1648087591
   }
 }
