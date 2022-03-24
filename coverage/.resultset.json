@@ -245,6 +245,7 @@
           1,
           1,
           1,
+          1,
           null
         ]
       },
@@ -288,12 +289,12 @@
           1,
           null,
           1,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -395,6 +396,15 @@
           null
         ]
       },
+      "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/snowboards_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
       "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/welcome_controller.rb": {
         "lines": [
           1,
@@ -405,6 +415,6 @@
         ]
       }
     },
-    "timestamp": 1648153459
+    "timestamp": 1648153808
   }
 }
