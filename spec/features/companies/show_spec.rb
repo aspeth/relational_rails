@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'company/:id' do
-
   before(:each) do
     @never_summer = Company.create!(name: "Never Summer", based_in_co: true, year_founded: 1991)
     @burton = Company.create!(name: "Burton", based_in_co: false, year_founded: 1977)
@@ -31,12 +30,5 @@ RSpec.describe 'company/:id' do
     visit "/companies/#{@burton.id}"
     expect(page).to have_content(@burton.snowboard_count)
     expect(page).to_not have_content(@never_summer.snowboard_count)
-  end
-
-  xit 'displays a link to the snowboard index' do
-    expect(page).to have_link('Back to the Snowboard Index')
-    click_link('Back to the Snowboard Index')
-
-    expect(page).to have_content()
   end
 end

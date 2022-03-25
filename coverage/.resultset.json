@@ -262,7 +262,6 @@
           1,
           null,
           1,
-          null,
           1,
           2,
           2,
@@ -292,13 +291,6 @@
           1,
           1,
           1,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          0,
           null,
           null
         ]
@@ -420,11 +412,11 @@
           1,
           null,
           1,
-          12,
+          24,
           null,
           null,
           1,
-          2,
+          4,
           null,
           null,
           1,
@@ -472,7 +464,7 @@
         "lines": [
           1,
           1,
-          2,
+          4,
           null,
           null,
           1,
@@ -487,22 +479,22 @@
           null
         ]
       },
-      "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/companies_snowboards_controller.rb": {
+      "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/snowboards_controller.rb": {
         "lines": [
           1,
+          1,
+          2,
+          null,
+          null,
           1,
           1,
           null,
           null
         ]
       },
-      "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/snowboards_controller.rb": {
+      "/Users/andrewspeth/turing/2module/projects/snowboards/app/controllers/companies_snowboards_controller.rb": {
         "lines": [
           1,
-          1,
-          1,
-          null,
-          null,
           1,
           1,
           null,
@@ -519,6 +511,6 @@
         ]
       }
     },
-    "timestamp": 1648244094
+    "timestamp": 1648246526
   }
 }
