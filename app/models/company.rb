@@ -13,8 +13,6 @@ class Company < ApplicationRecord
   end
 
   def snowboard_count
-    @snowboards = Snowboard.where(company_id: id)
-
-    require "pry"; binding.pry
+    snowboards.count
   end
 end
