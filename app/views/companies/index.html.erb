@@ -3,5 +3,5 @@
 <% companies.reverse! %>
 <% companies.each do |company| %>
   <h3><a href="/companies/<%= company.id %>"><%= company.name %></a></h3>
-  <p>Created at: <%= company.created_at.strftime("%m/%d/%y") %>
+  <p>Created at: <%= company.readable_date %>
 <% end %>
