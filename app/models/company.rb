@@ -8,6 +8,10 @@ class Company < ApplicationRecord
     self.created_at.strftime("%m/%d/%y")
   end
 
+  def self.most_recent
+    order(created_at: :desc)
+  end
+
   def snowboard_count
     @snowboards = Snowboard.where(company_id: id)
 
