@@ -20,6 +20,7 @@ RSpec.describe 'companies#index' do
     company_2 = Company.create!(name: "Burton", based_in_co: false, year_founded: 1977)
 
     visit '/companies'
+    expect(page).to have_content(company_1.created_at.strftime("%m/%d/%y"))
     expect(company_2.name).to appear_before(company_1.name)
   end
 end
