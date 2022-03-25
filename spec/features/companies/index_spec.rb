@@ -27,8 +27,8 @@ RSpec.describe 'companies#index' do
 
   it 'displays a link to the snowboard index' do
     visit "/companies"
-    expect(page).to have_link('Back to the Snowboard Index')
-    click_link('Back to the Snowboard Index')
+    expect(page).to have_link('Snowboard Index')
+    click_link('Snowboard Index')
 
     expect(page).to have_content(@insta_gator.name)
     expect(page).to have_content(@process.name)

@@ -34,8 +34,8 @@ RSpec.describe 'company/:id' do
 
   it 'displays a link to the snowboard index' do
     visit "/companies/#{@never_summer.id}"
-    expect(page).to have_link('Back to the Snowboard Index')
-    click_link('Back to the Snowboard Index')
+    expect(page).to have_link('Snowboard Index')
+    click_link('Snowboard Index')
 
     expect(page).to have_content(@insta_gator.name)
     expect(page).to have_content(@process.name)
@@ -44,8 +44,8 @@ RSpec.describe 'company/:id' do
     expect(page).to have_content(@fish.name)
 
     visit "/companies/#{@burton.id}"
-    expect(page).to have_link('Back to the Snowboard Index')
-    click_link('Back to the Snowboard Index')
+    expect(page).to have_link('Snowboard Index')
+    click_link('Snowboard Index')
 
     expect(page).to have_content(@insta_gator.name)
     expect(page).to have_content(@process.name)
