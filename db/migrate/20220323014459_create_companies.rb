@@ -4,8 +4,6 @@ class CreateCompanies < ActiveRecord::Migration[5.2]
       t.string :name
       t.boolean :based_in_co
       t.integer :year_founded
-      t.datetime :created_at
-      t.datetime :updated_at
 
       t.timestamps
     end

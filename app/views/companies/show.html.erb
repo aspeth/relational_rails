@@ -1,0 +1,6 @@
+<a href="/companies"> Company Index </a><a href="/snowboards"> Snowboard Index </a>
+<h1> <%= @company.name %> </h1>
+<p>Board Count: <%= @company.snowboard_count %></p>
+<p> Local CO Company? <%= @company.based_in_co %> </p>
+<p> Year Founded: <%= @company.year_founded %> </p>
+<h3><a href="/companies/<%= @company.id %>/snowboards"> See Our Boards! </a></h3>

@@ -1,0 +1,7 @@
+<a href="/companies"> Company Index </a>
+<h1> Snowboards </h1>
+<% @snowboards.each do |snowboard| %>
+  <h3><a href="/snowboards/<%= snowboard.id %>"><%= snowboard.name %></a></h3>
+  <p> Length <%= snowboard.length %>
+  <p> Rips in pow? <%= snowboard.powder_board %></p>
+<% end %>
