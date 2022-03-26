@@ -69,4 +69,22 @@ RSpec.describe 'company/:id' do
     expect(page).to have_content(@never_summer.name)
     expect(page).to have_content(@burton.name)
   end
+
+  it 'displays a link to the companies/:id/snowboards index' do
+    visit "/companies/#{@never_summer.id}"
+    expect(page).to have_link('See Our Boards!')
+    click_link('See Our Boards!')
+
+    expect(page).to have_content(@insta_gator.name)
+    expect(page).to have_content(@insta_gator.powder_board)
+    expect(page).to have_content(@insta_gator.length)
+
+    visit "/companies/#{@burton.id}"
+    expect(page).to have_link('See Our Boards!')
+    click_link('See Our Boards!')
+
+    expect(page).to have_content(@process.name)
+    expect(page).to have_content(@process.powder_board)
+    expect(page).to have_content(@process.length)
+  end
 end
