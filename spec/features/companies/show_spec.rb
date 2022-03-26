@@ -53,4 +53,20 @@ RSpec.describe 'company/:id' do
     expect(page).to have_content(@skeleton_key.name)
     expect(page).to have_content(@fish.name)
   end
+
+  it 'displays a link to the companies index' do
+    visit "/companies/#{@never_summer.id}"
+    expect(page).to have_link('Companies Index')
+    click_link('Companies Index')
+
+    expect(page).to have_content(@never_summer.name)
+    expect(page).to have_content(@burton.name)
+
+    visit "/companies/#{@burton.id}"
+    expect(page).to have_link('Companies Index')
+    click_link('Companies Index')
+
+    expect(page).to have_content(@never_summer.name)
+    expect(page).to have_content(@burton.name)
+  end
 end
