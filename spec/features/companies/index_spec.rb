@@ -54,9 +54,9 @@ RSpec.describe 'companies#index' do
     expect(current_path).to eq('/companies/new')
 
     fill_in 'Name', with: 'Korua'
-    fill_in 'Colorado based', with: 'false'
+    fill_in 'Based in co', with: 'false'
     fill_in 'Year founded', with: '2014'
-    click_on 'Create Company'
+    click_on 'Save'
 
     expect(current_path).to eq('/companies')
     expect(page).to have_content('Korua')

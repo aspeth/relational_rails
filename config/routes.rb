@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/', to: 'welcome#index'
   get '/companies', to: 'companies#index'
   get '/companies/new', to: 'companies#new'
+  post '/companies', to: 'companies#create'
   get '/companies/:id', to: 'companies#show'
   get '/snowboards', to: 'snowboards#index'
   get '/snowboards/:id', to: 'snowboards#show'
