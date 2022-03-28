@@ -87,4 +87,20 @@ RSpec.describe 'company/:id' do
     expect(page).to have_content(@process.powder_board)
     expect(page).to have_content(@process.length)
   end
+
+  it 'has a link to edit company' do
+    visit "/companies/#{@never_summer.id}"
+    expect(page).to have_link("Edit Company")
+
+    click_link("Edit Company")
+    expect(current_path).to eq("/companies/#{@never_summer.id}/edit")
+
+    fill_in 'Name', with: 'Fake Company'
+    fill_in 'Based in co', with: 'false'
+    fill_in 'Year founded', with: '2030'
+    click_on 'Save'
+
+    expect(current_path).to eq("/companies/#{@never_summer.id}")
+    expect(page).to have_content('Fake Company')
+  end
 end
