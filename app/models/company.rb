@@ -5,7 +5,7 @@ class Company < ApplicationRecord
   has_many :snowboards
 
   def readable_date
-    self.created_at.strftime("%m/%d/%y")
+    self.created_at.strftime("%m/%d/%y %l:%M:%S.%L")
   end
 
   def self.most_recent
