@@ -63,4 +63,20 @@ RSpec.describe "/companies/:id/snowboards" do
     expect(page).to have_content(@never_summer.name)
     expect(page).to have_content(@burton.name)
   end
+
+  it 'has a link to create new company' do
+    visit "/companies/#{@never_summer.id}/snowboards"
+    expect(page).to have_link("New Snowboard")
+
+    click_link("New Snowboard")
+    expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards/new")
+
+    fill_in 'Name', with: 'Swift'
+    fill_in 'Powder board', with: 'true'
+    fill_in 'Length', with: '157'
+    click_on 'Save'
+
+    expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards")
+    expect(page).to have_content('Swift')
+  end
 end
