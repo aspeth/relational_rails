@@ -35,15 +35,30 @@ RSpec.describe 'companies#index' do
     expect(page).to have_content(@big_gun.name)
     expect(page).to have_content(@skeleton_key.name)
     expect(page).to have_content(@fish.name)
+  end
+  # As a visitor
+  # When I visit the Parent Index page
+  # Then I see a link to create a new Parent record, "New Parent"
+  # When I click this link
+  # Then I am taken to '/parents/new' where I  see a form for a new parent record
+  # When I fill out the form with a new parent's attributes:
+  # And I click the button "Create Parent" to submit the form
+  # Then a `POST` request is sent to the '/parents' route,
+  # a new parent record is created,
+  # and I am redirected to the Parent Index page where I see the new Parent displayed.
+  it 'has a link to create new company' do
+    visit "/companies"
+    expect(page).to have_link("New Company")
 
-    visit "/companies/#{@burton.id}"
-    expect(page).to have_link('Snowboard Index')
-    click_link('Snowboard Index')
+    click_link("New Company")
+    expect(current_path).to eq('/companies/new')
 
-    expect(page).to have_content(@insta_gator.name)
-    expect(page).to have_content(@process.name)
-    expect(page).to have_content(@big_gun.name)
-    expect(page).to have_content(@skeleton_key.name)
-    expect(page).to have_content(@fish.name)
+    fill_in 'Name', with: 'Korua'
+    fill_in 'Colorado based', with: 'false'
+    fill_in 'Year founded', with: '2014'
+    click_on 'Create Company'
+
+    expect(current_path).to eq('/companies')
+    expect(page).to have_content('Korua')
   end
 end
