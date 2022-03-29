@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-29T17:02:42-06:00">2022-03-29T17:02:42-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-03-29T17:20:20-06:00">2022-03-29T17:20:20-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>408</b> relevant lines,
-    <span class="green"><b>408</b> lines covered</span> and
+    <b>420</b> relevant lines,
+    <span class="green"><b>420</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -106,11 +106,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#faf91b6ee3235f0b68536324ddee45abc97fca4a" class="src_link" title="app/controllers/snowboards_controller.rb">app/controllers/snowboards_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">26</td>
-            <td class="cell--number">12</td>
-            <td class="cell--number">12</td>
+            <td class="cell--number">32</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">16</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">2.58</td>
+            <td class="cell--number">2.31</td>
             
           </tr>
         
@@ -315,9 +315,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#16360d42e3b2a074a34276a6ea08ead258fada6a" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">19</td>
-            <td class="cell--number">17</td>
-            <td class="cell--number">17</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">18</td>
+            <td class="cell--number">18</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -359,11 +359,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#3002dde0c8b1586da261f934d38a050c2d6bd9fb" class="src_link" title="spec/features/snowboards/show_spec.rb">spec/features/snowboards/show_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">77</td>
-            <td class="cell--number">54</td>
-            <td class="cell--number">54</td>
+            <td class="cell--number">89</td>
+            <td class="cell--number">61</td>
+            <td class="cell--number">61</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.39</td>
+            <td class="cell--number">1.46</td>
             
           </tr>
         
@@ -1360,8 +1360,8 @@
     
 
     <div class="t-line-summary">
-      <b>12</b> relevant lines.
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>16</b> relevant lines.
+      <span class="green"><b>16</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -1395,8 +1395,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="10" data-linenumber="3">
-            <span class="hits">10</span>
+          <li class="covered" data-hits="11" data-linenumber="3">
+            <span class="hits">11</span>
             
 
             
@@ -1439,8 +1439,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="7" data-linenumber="7">
-            <span class="hits">7</span>
+          <li class="covered" data-hits="8" data-linenumber="7">
+            <span class="hits">8</span>
             
 
             
@@ -1637,7 +1637,62 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def destroy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="26">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    snowboard = Snowboard.find(params[:id])</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="27">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    snowboard.destroy</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="28">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    redirect_to &#39;/snowboards&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="29">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="30">
             
             
 
@@ -1648,7 +1703,18 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="26">
+          <li class="never" data-hits="" data-linenumber="31">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="32">
             
             
 
@@ -4699,8 +4765,8 @@
     
 
     <div class="t-line-summary">
-      <b>17</b> relevant lines.
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>18</b> relevant lines.
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -4850,7 +4916,7 @@
 
             
 
-            <code class="ruby">  get &#39;/snowboards/:id/edit&#39;, to: &#39;snowboards#edit&#39;</code>
+            <code class="ruby">  delete &#39;/snowboards/:id&#39;, to: &#39;snowboards#destroy&#39;</code>
           </li>
         </div>
       
@@ -4861,7 +4927,7 @@
 
             
 
-            <code class="ruby">  get &#39;/snowboards/:id&#39;, to: &#39;snowboards#show&#39;</code>
+            <code class="ruby">  get &#39;/snowboards/:id/edit&#39;, to: &#39;snowboards#edit&#39;</code>
           </li>
         </div>
       
@@ -4872,7 +4938,7 @@
 
             
 
-            <code class="ruby">  get &#39;/companies/:id/snowboards/new&#39;, to: &#39;companies_snowboards#new&#39;</code>
+            <code class="ruby">  get &#39;/snowboards/:id&#39;, to: &#39;snowboards#show&#39;</code>
           </li>
         </div>
       
@@ -4883,7 +4949,7 @@
 
             
 
-            <code class="ruby">  get &#39;/companies/:id/snowboards?sort=alpha&quot;&#39;, to: &#39;companies_snowboards#alphabetize&#39;</code>
+            <code class="ruby">  get &#39;/companies/:id/snowboards/new&#39;, to: &#39;companies_snowboards#new&#39;</code>
           </li>
         </div>
       
@@ -4894,7 +4960,7 @@
 
             
 
-            <code class="ruby">  get &#39;/companies/:id/snowboards&#39;, to: &#39;companies_snowboards#index&#39;</code>
+            <code class="ruby">  get &#39;/companies/:id/snowboards?sort=alpha&quot;&#39;, to: &#39;companies_snowboards#alphabetize&#39;</code>
           </li>
         </div>
       
@@ -4905,12 +4971,23 @@
 
             
 
+            <code class="ruby">  get &#39;/companies/:id/snowboards&#39;, to: &#39;companies_snowboards#index&#39;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="19">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">  post &#39;/companies/:id/snowboards&#39;, to: &#39;companies_snowboards#create&#39;</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="19">
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
@@ -8035,8 +8112,8 @@
     
 
     <div class="t-line-summary">
-      <b>54</b> relevant lines.
-      <span class="green"><b>54</b> lines covered</span> and
+      <b>61</b> relevant lines.
+      <span class="green"><b>61</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -8103,8 +8180,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="6">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="6">
+            <span class="hits">5</span>
             
 
             
@@ -8114,8 +8191,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="7">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="7">
+            <span class="hits">5</span>
             
 
             
@@ -8136,8 +8213,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="9">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="9">
+            <span class="hits">5</span>
             
 
             
@@ -8147,8 +8224,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="10">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="10">
+            <span class="hits">5</span>
             
 
             
@@ -8158,8 +8235,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="11">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="11">
+            <span class="hits">5</span>
             
 
             
@@ -8169,8 +8246,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="12">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="12">
+            <span class="hits">5</span>
             
 
             
@@ -8180,8 +8257,8 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="4" data-linenumber="13">
-            <span class="hits">4</span>
+          <li class="covered" data-hits="5" data-linenumber="13">
+            <span class="hits">5</span>
             
 
             
@@ -8885,6 +8962,138 @@
       
         <div>
           <li class="never" data-hits="" data-linenumber="77">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="78">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  it &#39;has a link to delete snowboard&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="79">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    visit &quot;/snowboards/#{@insta_gator.id}&quot;</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="80">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="81">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_content(@insta_gator.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="82">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to have_link(&quot;Delete #{@insta_gator.name}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="83">
+            
+            
+
+            
+
+            <code class="ruby">    </code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="84">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    click_link(&quot;Delete #{@insta_gator.name}&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="85">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="86">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(current_path).to eq(&quot;/snowboards&quot;)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="87">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    expect(page).to_not have_content(@insta_gator.name)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="88">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="89">
             
             
 

@@ -3,3 +3,4 @@
 <p> Length <%= @snowboard.length %> </p>
 <p> Rips in pow? <%= @snowboard.powder_board %> </p>
 <a href="/snowboards/<%= @snowboard.id %>/edit"> Edit Snowboard </a>
+<%= link_to "Delete #{@snowboard.name}", "/snowboards/#{@snowboard.id}", method: :delete %>

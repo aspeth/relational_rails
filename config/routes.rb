@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/companies/:id', to: 'companies#show'
   get '/snowboards', to: 'snowboards#index'
   patch '/snowboards/:id', to: 'snowboards#update'
+  delete '/snowboards/:id', to: 'snowboards#destroy'
   get '/snowboards/:id/edit', to: 'snowboards#edit'
   get '/snowboards/:id', to: 'snowboards#show'
   get '/companies/:id/snowboards/new', to: 'companies_snowboards#new'
