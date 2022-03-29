@@ -1,6 +1,12 @@
 class CompaniesSnowboardsController < ApplicationController
   def index
-    @company = Company.find(params[:id])
+    if params[:sort] == "alpha"
+      @company = Company.find(params[:id])
+      @snowboards = @company.alphabetize
+    else
+      @company = Company.find(params[:id])
+      @snowboards = @company.snowboards
+    end
   end
   
   def new

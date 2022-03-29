@@ -1,8 +1,9 @@
 <a href="/companies"> Company Index </a><a href="/snowboards"> Snowboard Index </a>
 <h1> <%= @company.name %> </h1>
-<% @company.snowboards.each do |snowboard| %>
+<% @snowboards.each do |snowboard| %>
   <h3><%= snowboard.name %></h3>
   <p>Rips in pow? <%= snowboard.powder_board %></p>
   <p>Length <%= snowboard.length %></p>
 <% end %>
+<a href="/companies/<%= @company.id %>/snowboards?sort=alpha"> Alphabetize </a>
 <a href="/companies/<%= @company.id %>/snowboards/new"> New Snowboard </a>
