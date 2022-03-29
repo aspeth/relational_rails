@@ -51,4 +51,16 @@ RSpec.describe 'companies#index' do
     expect(current_path).to eq('/companies')
     expect(page).to have_content('Korua')
   end
+
+  it 'has a link to edit each company' do
+    visit "/companies"
+    expect(page).to have_link("Edit #{@never_summer.name}")
+    expect(page).to have_link("Edit #{@burton.name}")
+
+    click_link("Edit #{@never_summer.name}")
+    expect(current_path).to eq("companies/#{@never_summer.id}/edit")
+
+    click_link("Edit #{@burton.name}")
+    expect(current_path).to eq("companies/#{@burton.id}/edit")
+  end
 end
