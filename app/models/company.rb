@@ -2,7 +2,7 @@ class Company < ApplicationRecord
   validates_presence_of :name
   validates_presence_of :year_founded
 
-  has_many :snowboards
+  has_many :snowboards, dependent: :destroy
 
   def readable_date
     self.created_at.strftime("%m/%d/%y %l:%M:%S.%L")

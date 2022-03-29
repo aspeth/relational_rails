@@ -100,13 +100,14 @@ RSpec.describe 'company/:id' do
     expect(current_path).to eq("/companies/#{@never_summer.id}")
     expect(page).to have_content('Fake Company')
   end
-
+  
   it 'has a link to delete company' do
     visit "/companies/#{@never_summer.id}"
     expect(page).to have_content(@never_summer.name)
     expect(page).to have_link("Delete Company")
     
     click_link("Delete Company")
+    expect(current_path).to eq("/companies")
     expect(page).to_not have_content(@never_summer.name)
   end
 end
