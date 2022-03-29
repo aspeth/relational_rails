@@ -35,4 +35,12 @@ RSpec.describe 'snowboards#index' do
     expect(page).to have_content(@never_summer.name)
     expect(page).to have_content(@burton.name)
   end
+  
+  it 'has an update link for each snowboard' do
+    expect(page).to have_link("Edit #{@insta_gator.name}")
+    expect(page).to have_link("Edit #{@big_gun.name}")
+    
+    
+
+  end
 end
