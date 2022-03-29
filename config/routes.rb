@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   patch '/companies/:id', to: 'companies#update'
   get '/companies/:id', to: 'companies#show'
   get '/snowboards', to: 'snowboards#index'
+  patch '/snowboards/:id', to: 'snowboards#update'
+  get '/snowboards/:id/edit', to: 'snowboards#edit'
   get '/snowboards/:id', to: 'snowboards#show'
   get '/companies/:id/snowboards/new', to: 'companies_snowboards#new'
   get '/companies/:id/snowboards', to: 'companies_snowboards#index'
