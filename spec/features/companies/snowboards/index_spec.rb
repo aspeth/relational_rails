@@ -82,10 +82,19 @@ RSpec.describe "/companies/:id/snowboards" do
     expect(page).to have_link("Alphabetize")
     expect(@insta_gator.name).to appear_before(@big_gun.name)
     click_link("Alphabetize")
-
+    
     expect(page).to have_content(@insta_gator.name)
     expect(page).to have_content(@big_gun.name)
     
     expect(@big_gun.name).to appear_before(@insta_gator.name)
+  end
+  
+  it 'has a link to edit each snowboard' do
+    visit "/companies/#{@never_summer.id}/snowboards"
+    within "#board-#{@insta_gator.id}" do
+      expect(page).to have_link("Edit #{@insta_gator.name}")
+      click_link("Edit #{@insta_gator.name}")
+      expect(current_path).to eq("/snowboards/#{@insta_gator.id}/edit")
+    end
   end
 end
