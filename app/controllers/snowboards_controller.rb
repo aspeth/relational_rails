@@ -1,6 +1,6 @@
 class SnowboardsController < ApplicationController
   def index
-    @snowboards = Snowboard.all
+    @snowboards = Snowboard.where(powder_board: true)
   end
 
   def show
