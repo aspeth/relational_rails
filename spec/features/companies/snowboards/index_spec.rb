@@ -103,5 +103,12 @@ RSpec.describe "/companies/:id/snowboards" do
       click_link("Edit #{@big_gun.name}")
       expect(current_path).to eq("/snowboards/#{@big_gun.id}/edit")
     end
+
+    visit "/companies/#{@burton.id}/snowboards"
+    within "#board-#{@fish.id}" do
+      expect(page).to have_link("Edit #{@fish.name}")
+      click_link("Edit #{@fish.name}")
+      expect(current_path).to eq("/snowboards/#{@fish.id}/edit")
+    end
   end
 end
