@@ -11,7 +11,6 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    # require "pry"; binding.pry
     Company.create(company_params)
     redirect_to '/companies'
   end

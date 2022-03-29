@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   get '/companies/:id', to: 'companies#show'
   get '/snowboards', to: 'snowboards#index'
   get '/snowboards/:id', to: 'snowboards#show'
+  get '/companies/:id/snowboards/new', to: 'companies_snowboards#new'
   get '/companies/:id/snowboards', to: 'companies_snowboards#index'
+  post '/companies/:id/snowboards', to: 'companies_snowboards#create'
 end
