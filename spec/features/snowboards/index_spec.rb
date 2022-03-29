@@ -13,20 +13,34 @@ RSpec.describe 'snowboards#index' do
     visit '/snowboards'
   end
 
-  it 'shows all snowboards' do
+  it 'only displays powder boards' do
     expect(page).to have_content(@insta_gator.name)
     expect(page).to have_content(@insta_gator.powder_board)
     expect(page).to have_content(@insta_gator.length)
-    expect(page).to have_content(@process.name)
-    expect(page).to have_content(@process.powder_board)
-    expect(page).to have_content(@process.length)
+    expect(page).to have_content(@big_gun.name)
+    expect(page).to have_content(@big_gun.powder_board)
+    expect(page).to have_content(@big_gun.length)
+    expect(page).to_not have_content(@process.name)
+    expect(page).to_not have_content(@process.powder_board)
+    expect(page).to_not have_content(@process.length)
+    expect(page).to_not have_content(@skeleton_key.name)
+    expect(page).to_not have_content(@skeleton_key.powder_board)
+    expect(page).to_not have_content(@skeleton_key.length)
   end
-
+  
   it 'displays a link to the companies index' do
     expect(page).to have_link('Company Index')
     click_link('Company Index')
-
+    
     expect(page).to have_content(@never_summer.name)
     expect(page).to have_content(@burton.name)
+  end
+  
+  it 'has a link to edit each snowboard' do
+    within "#board-#{@insta_gator.id}" do
+      expect(page).to have_link("Edit #{@insta_gator.name}")
+      click_link("Edit #{@insta_gator.name}")
+      expect(current_path).to eq("/snowboards/#{@insta_gator.id}/edit")
+    end
   end
 end

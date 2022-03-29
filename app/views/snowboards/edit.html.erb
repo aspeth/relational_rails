@@ -1,0 +1,9 @@
+<%= form_with url: "/snowboards/#{@snowboard.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :powder_board %>
+  <%= form.text_field :powder_board %>
+  <%= form.label :length %>
+  <%= form.text_field :length %>
+  <%= form.submit %>
+<% end %>

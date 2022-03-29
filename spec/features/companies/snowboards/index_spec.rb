@@ -32,9 +32,7 @@ RSpec.describe "/companies/:id/snowboards" do
     click_link('Snowboard Index')
 
     expect(page).to have_content(@insta_gator.name)
-    expect(page).to have_content(@process.name)
     expect(page).to have_content(@big_gun.name)
-    expect(page).to have_content(@skeleton_key.name)
     expect(page).to have_content(@fish.name)
 
     visit "/companies/#{@burton.id}/snowboards"
@@ -42,9 +40,7 @@ RSpec.describe "/companies/:id/snowboards" do
     click_link('Snowboard Index')
 
     expect(page).to have_content(@insta_gator.name)
-    expect(page).to have_content(@process.name)
     expect(page).to have_content(@big_gun.name)
-    expect(page).to have_content(@skeleton_key.name)
     expect(page).to have_content(@fish.name)
   end
 
@@ -62,5 +58,57 @@ RSpec.describe "/companies/:id/snowboards" do
 
     expect(page).to have_content(@never_summer.name)
     expect(page).to have_content(@burton.name)
+  end
+
+  it 'has a link to create new snowboard' do
+    visit "/companies/#{@never_summer.id}/snowboards"
+    expect(page).to have_link("New Snowboard")
+    expect(page).to_not have_content("Swift")
+    
+    click_link("New Snowboard")
+    expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards/new")
+    
+    fill_in 'Name', with: 'Swift'
+    fill_in 'Powder board', with: 'true'
+    fill_in 'Length', with: '157'
+    click_on 'Save'
+    
+    expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards")
+    expect(page).to have_content('Swift')
+  end
+  
+  it "can sort snowboards in alphabetical order" do
+    visit "/companies/#{@never_summer.id}/snowboards"
+    expect(page).to have_link("Alphabetize")
+    expect(@insta_gator.name).to appear_before(@big_gun.name)
+    click_link("Alphabetize")
+    
+    expect(page).to have_content(@insta_gator.name)
+    expect(page).to have_content(@big_gun.name)
+    
+    expect(@big_gun.name).to appear_before(@insta_gator.name)
+  end
+  
+  it 'has a link to edit each snowboard' do
+    visit "/companies/#{@never_summer.id}/snowboards"
+    within "#board-#{@insta_gator.id}" do
+      expect(page).to have_link("Edit #{@insta_gator.name}")
+      click_link("Edit #{@insta_gator.name}")
+      expect(current_path).to eq("/snowboards/#{@insta_gator.id}/edit")
+    end
+    
+    visit "/companies/#{@never_summer.id}/snowboards"
+    within "#board-#{@big_gun.id}" do
+      expect(page).to have_link("Edit #{@big_gun.name}")
+      click_link("Edit #{@big_gun.name}")
+      expect(current_path).to eq("/snowboards/#{@big_gun.id}/edit")
+    end
+
+    visit "/companies/#{@burton.id}/snowboards"
+    within "#board-#{@fish.id}" do
+      expect(page).to have_link("Edit #{@fish.name}")
+      click_link("Edit #{@fish.name}")
+      expect(current_path).to eq("/snowboards/#{@fish.id}/edit")
+    end
   end
 end

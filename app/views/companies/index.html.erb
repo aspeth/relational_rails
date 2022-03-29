@@ -1,6 +1,8 @@
-<a href="/snowboards"> Snowboard Index </a> 
+<a href="/snowboards"> Snowboard Index </a>
 <h1> Companies </h1>
 <% @companies.most_recent.each do |company| %>
   <h3><a href="/companies/<%= company.id %>"><%= company.name %></a></h3>
   <p>Created at: <%= company.readable_date %>
+  <h2><a href="/companies/<%= company.id %>/edit">Edit <%= company.name %></a></h2>
 <% end %>
+<br><br><a href="/companies/new"> New Company </a>

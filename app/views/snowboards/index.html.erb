@@ -1,7 +1,10 @@
 <a href="/companies"> Company Index </a>
 <h1> Snowboards </h1>
 <% @snowboards.each do |snowboard| %>
+  <div id="board-<%= snowboard.id %>">
   <h3><a href="/snowboards/<%= snowboard.id %>"><%= snowboard.name %></a></h3>
   <p> Length <%= snowboard.length %>
   <p> Rips in pow? <%= snowboard.powder_board %></p>
+  <a href="/snowboards/<%= snowboard.id %>/edit"> Edit <%= snowboard.name %></a>
+  </div>
 <% end %>

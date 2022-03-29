@@ -38,9 +38,7 @@ RSpec.describe 'company/:id' do
     click_link('Snowboard Index')
 
     expect(page).to have_content(@insta_gator.name)
-    expect(page).to have_content(@process.name)
     expect(page).to have_content(@big_gun.name)
-    expect(page).to have_content(@skeleton_key.name)
     expect(page).to have_content(@fish.name)
 
     visit "/companies/#{@burton.id}"
@@ -48,9 +46,7 @@ RSpec.describe 'company/:id' do
     click_link('Snowboard Index')
 
     expect(page).to have_content(@insta_gator.name)
-    expect(page).to have_content(@process.name)
     expect(page).to have_content(@big_gun.name)
-    expect(page).to have_content(@skeleton_key.name)
     expect(page).to have_content(@fish.name)
   end
 
@@ -86,5 +82,22 @@ RSpec.describe 'company/:id' do
     expect(page).to have_content(@process.name)
     expect(page).to have_content(@process.powder_board)
     expect(page).to have_content(@process.length)
+  end
+
+  it 'has a link to edit company' do
+    visit "/companies/#{@never_summer.id}"
+    expect(page).to have_link("Edit Company")
+    expect(page).to_not have_content('Fake Company')
+
+    click_link("Edit Company")
+    expect(current_path).to eq("/companies/#{@never_summer.id}/edit")
+
+    fill_in 'Name', with: 'Fake Company'
+    fill_in 'Based in co', with: 'false'
+    fill_in 'Year founded', with: '2030'
+    click_on 'Save'
+
+    expect(current_path).to eq("/companies/#{@never_summer.id}")
+    expect(page).to have_content('Fake Company')
   end
 end

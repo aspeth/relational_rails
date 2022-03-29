@@ -6,4 +6,34 @@ class CompaniesController < ApplicationController
   def show
     @company = Company.find(params[:id])
   end
+
+  def new
+  end
+
+  def create
+    Company.create(company_params)
+    redirect_to '/companies'
+  end
+
+  def edit
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    # require "pry"; binding.pry
+    company = Company.find(params[:id])
+    company.update({
+      name: params[:name],
+      based_in_co: params[:based_in_co],
+      year_founded: params[:year_founded]
+    })
+    company.save
+    redirect_to "/companies/#{company.id}"
+  end
+
+  private
+
+    def company_params
+      params.permit(:name, :based_in_co, :year_founded)
+    end
 end

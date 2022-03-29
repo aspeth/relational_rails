@@ -44,7 +44,6 @@ group :development, :test do
   gem 'orderly'
   gem 'simplecov'
   gem 'launchy'
-  gem 'orderly'
 end
 
 group :development do

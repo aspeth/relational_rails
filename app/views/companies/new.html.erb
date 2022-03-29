@@ -1,0 +1,9 @@
+<%= form_with url: "/companies", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :based_in_co %>
+  <%= form.text_field :based_in_co %>
+  <%= form.label :year_founded %>
+  <%= form.text_field :year_founded %>
+  <%= form.submit %>
+<% end %>

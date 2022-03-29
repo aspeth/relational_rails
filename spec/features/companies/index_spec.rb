@@ -31,19 +31,37 @@ RSpec.describe 'companies#index' do
     click_link('Snowboard Index')
 
     expect(page).to have_content(@insta_gator.name)
-    expect(page).to have_content(@process.name)
     expect(page).to have_content(@big_gun.name)
-    expect(page).to have_content(@skeleton_key.name)
     expect(page).to have_content(@fish.name)
+  end
+  
+  it 'has a link to create new company' do
+    visit "/companies"
+    expect(page).to have_link("New Company")
+    expect(page).to_not have_content('Korua')
 
-    visit "/companies/#{@burton.id}"
-    expect(page).to have_link('Snowboard Index')
-    click_link('Snowboard Index')
+    click_link("New Company")
+    expect(current_path).to eq('/companies/new')
 
-    expect(page).to have_content(@insta_gator.name)
-    expect(page).to have_content(@process.name)
-    expect(page).to have_content(@big_gun.name)
-    expect(page).to have_content(@skeleton_key.name)
-    expect(page).to have_content(@fish.name)
+    fill_in 'Name', with: 'Korua'
+    fill_in 'Based in co', with: 'false'
+    fill_in 'Year founded', with: '2014'
+    click_on 'Save'
+
+    expect(current_path).to eq('/companies')
+    expect(page).to have_content('Korua')
+  end
+
+  it 'has a link to edit each company' do
+    visit "/companies"
+    expect(page).to have_link("Edit #{@never_summer.name}")
+    expect(page).to have_link("Edit #{@burton.name}")
+    
+    click_link("Edit #{@never_summer.name}")
+    expect(current_path).to eq("/companies/#{@never_summer.id}/edit")
+    
+    visit "/companies"
+    click_link("Edit #{@burton.name}")
+    expect(current_path).to eq("/companies/#{@burton.id}/edit")
   end
 end

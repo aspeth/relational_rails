@@ -15,4 +15,9 @@ class Company < ApplicationRecord
   def snowboard_count
     snowboards.count
   end
+
+  def alphabetize
+    alpha_list = snowboards.order(:name)
+    alpha_list
+  end
 end
