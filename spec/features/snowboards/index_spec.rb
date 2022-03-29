@@ -39,8 +39,5 @@ RSpec.describe 'snowboards#index' do
   it 'has an update link for each snowboard' do
     expect(page).to have_link("Edit #{@insta_gator.name}")
     expect(page).to have_link("Edit #{@big_gun.name}")
-    
-    
-
   end
 end
