@@ -64,16 +64,28 @@ RSpec.describe "/companies/:id/snowboards" do
     visit "/companies/#{@never_summer.id}/snowboards"
     expect(page).to have_link("New Snowboard")
     expect(page).to_not have_content("Swift")
-
+    
     click_link("New Snowboard")
     expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards/new")
-
+    
     fill_in 'Name', with: 'Swift'
     fill_in 'Powder board', with: 'true'
     fill_in 'Length', with: '157'
     click_on 'Save'
-
+    
     expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards")
     expect(page).to have_content('Swift')
+  end
+  
+  it "can sort snowboards in alphabetical order" do
+    visit "/companies/#{@never_summer.id}/snowboards"
+    expect(page).to have_link("Alphabetize")
+    expect(@insta_gator.name).to appear_before(@big_gun.name)
+    click_link("Alphabetize")
+
+    expect(page).to have_content(@insta_gator.name)
+    expect(page).to have_content(@big_gun.name)
+    
+    expect(@big_gun.name).to appear_before(@insta_gator.name)
   end
 end
