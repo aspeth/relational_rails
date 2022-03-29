@@ -91,6 +91,7 @@ RSpec.describe 'company/:id' do
   it 'has a link to edit company' do
     visit "/companies/#{@never_summer.id}"
     expect(page).to have_link("Edit Company")
+    expect(page).to_not have_content('Fake Company')
 
     click_link("Edit Company")
     expect(current_path).to eq("/companies/#{@never_summer.id}/edit")

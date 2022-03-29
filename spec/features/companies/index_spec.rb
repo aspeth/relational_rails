@@ -40,6 +40,7 @@ RSpec.describe 'companies#index' do
   it 'has a link to create new company' do
     visit "/companies"
     expect(page).to have_link("New Company")
+    expect(page).to_not have_content('Korua')
 
     click_link("New Company")
     expect(current_path).to eq('/companies/new')

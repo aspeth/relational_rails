@@ -64,9 +64,10 @@ RSpec.describe "/companies/:id/snowboards" do
     expect(page).to have_content(@burton.name)
   end
 
-  it 'has a link to create new company' do
+  it 'has a link to create new snowboard' do
     visit "/companies/#{@never_summer.id}/snowboards"
     expect(page).to have_link("New Snowboard")
+    expect(page).to_not have_content("Swift")
 
     click_link("New Snowboard")
     expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards/new")
