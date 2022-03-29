@@ -36,8 +36,11 @@ RSpec.describe 'snowboards#index' do
     expect(page).to have_content(@burton.name)
   end
   
-  it 'has an update link for each snowboard' do
-    expect(page).to have_link("Edit #{@insta_gator.name}")
-    expect(page).to have_link("Edit #{@big_gun.name}")
+  it 'has a link to edit each snowboard' do
+    within "#board-#{@insta_gator.id}" do
+      expect(page).to have_link("Edit #{@insta_gator.name}")
+      click_link("Edit #{@insta_gator.name}")
+      expect(current_path).to eq("/snowboards/#{@insta_gator.id}/edit")
+    end
   end
 end
