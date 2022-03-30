@@ -64,4 +64,16 @@ RSpec.describe 'companies#index' do
     click_link("Edit #{@burton.name}")
     expect(current_path).to eq("/companies/#{@burton.id}/edit")
   end
+  
+  it 'has a link to delete each parent' do
+    visit "/companies"
+    expect(page).to have_link("Delete #{@never_summer.name}")
+    expect(page).to have_link("Delete #{@burton.name}")
+    
+    click_link("Delete #{@burton.name}")
+    
+    expect(page).to have_content(@never_summer.name)
+    expect(page).to_not have_content(@burton.name)
+    expect(current_path).to eq("/companies")
+  end
 end

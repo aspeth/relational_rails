@@ -20,16 +20,21 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    # require "pry"; binding.pry
     company = Company.find(params[:id])
     company.update({
       name: params[:name],
       based_in_co: params[:based_in_co],
       year_founded: params[:year_founded]
-    })
-    company.save
-    redirect_to "/companies/#{company.id}"
-  end
+      })
+      company.save
+      redirect_to "/companies/#{company.id}"
+    end
+    
+    def destroy
+      company = Company.find(params[:id])
+      company.destroy
+      redirect_to "/companies"
+    end
 
   private
 

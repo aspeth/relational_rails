@@ -21,6 +21,12 @@ class SnowboardsController < ApplicationController
     snowboard.save
     redirect_to "/snowboards/#{snowboard.id}"
   end
+  
+  def destroy
+    snowboard = Snowboard.find(params[:id])
+    snowboard.destroy
+    redirect_to '/snowboards'
+  end
 
 
 end

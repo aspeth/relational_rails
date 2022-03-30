@@ -3,6 +3,9 @@ class CompaniesSnowboardsController < ApplicationController
     if params[:sort] == "alpha"
       @company = Company.find(params[:id])
       @snowboards = @company.alphabetize
+    elsif params[:length]
+      @company = Company.find(params[:id])
+      @snowboards = @company.sort_by_length(params[:length])
     else
       @company = Company.find(params[:id])
       @snowboards = @company.snowboards
@@ -19,6 +22,12 @@ class CompaniesSnowboardsController < ApplicationController
     snowboard[:company_id] = company.id
     snowboard.save
     redirect_to "/companies/#{company.id}/snowboards"
+  end
+
+  def destroy
+    snowboard = Snowboard.find(params[:id])
+    snowboard.destroy
+    redirect_to "/snowboards"
   end
 
   private

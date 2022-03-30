@@ -3,6 +3,7 @@
 <% @companies.most_recent.each do |company| %>
   <h3><a href="/companies/<%= company.id %>"><%= company.name %></a></h3>
   <p>Created at: <%= company.readable_date %>
-  <h2><a href="/companies/<%= company.id %>/edit">Edit <%= company.name %></a></h2>
+  <p><a href="/companies/<%= company.id %>/edit">Edit <%= company.name %></a></p>
+  <p> <%= link_to "Delete #{company.name}", "/companies/#{company.id}", method: :delete %>
 <% end %>
 <br><br><a href="/companies/new"> New Company </a>

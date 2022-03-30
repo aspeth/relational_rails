@@ -5,5 +5,4 @@
 <p> Year Founded: <%= @company.year_founded %> </p>
 <h3><a href="/companies/<%= @company.id %>/snowboards"> See Our Boards! </a></h3>
 <a href="/companies/<%= @company.id %>/edit"> Edit Company </a>
-
-
+<%= link_to "Delete Company", "/companies/#{@company.id}", method: :delete %>
