@@ -1,24 +1,50 @@
-# README
+# Relational Rails - Snowboard Site
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Relational Rails project requires **building a relational database** with a one-to-many or parent/child relationship, and utilizing the **Rails framework** to create a website with **CRUD (create, read, update, delete) functionality**.
 
-Things you may want to cover:
+Following these guidlines, The Snowboard Site provides users with the ability to interact with the database containing companies (parent class) and snowboards (child class) through their web browser.  Users can view the current information from the database, add new items, update existing items, and delete items. Additional functionality includes the ability to sort a given company's snowboards alphabetically, and/or return a list of snowboards that are longer than a given length.
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
+Users will need Ruby 2.7.4 - you can run the following command in your terminal (see https://github.com/rbenv/rbenv if you don't yet have rbenv)
 
-* Configuration
+```
+rbenv local 2.7.4
+```
 
-* Database creation
+### Installing
 
-* Database initialization
+Run the following commands in your terminal to get the project up and running
 
-* How to run the test suite
+Clone the project onto your local machine
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+git clone git@github.com:aspeth/snowboards.git
+```
 
-* Deployment instructions
+Bundle install the associated gems and check for updates
 
-* ...
+```
+bundle install
+bundle update
+```
+
+## Running the tests
+
+Tests are written in RSpec - run the following command in your terminal to execute all tests
+
+```
+bundle exec rspec
+```
+
+## Viewing the Website
+
+Start the Rails Server
+
+```
+rails s
+```
+
+### Open http://localhost:3000/ in a web browswer (Chrome and Safari work for sure, I haven't tested any others but they may work)
+
+Click around and do the stuff!
