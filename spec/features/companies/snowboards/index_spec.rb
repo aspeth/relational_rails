@@ -126,4 +126,15 @@ RSpec.describe "/companies/:id/snowboards" do
     expect(page).to_not have_content(@insta_gator.name)
     expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards")
   end
+  
+  it 'has a link to delete each snowboard' do
+    visit "/companies/#{@never_summer.id}/snowboards"
+    within "#board-#{@insta_gator.id}" do
+      expect(page).to have_content(@insta_gator.name)
+      click_link("Delete #{@insta_gator.name}")
+    end
+    
+    expect(current_path).to eq("/snowboards")
+    expect(page).to_not have_content(@insta_gator.name)
+  end
 end
