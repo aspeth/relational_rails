@@ -48,3 +48,7 @@ rails s
 #### Open http://localhost:3000/ in a web browswer (Chrome and Safari work for sure, I haven't tested any others but they may work)
 
 Click around and do the stuff!
+
+# Visual Representation of Database Schema
+![image](https://user-images.githubusercontent.com/92954894/160937167-28543731-a347-46cb-9ddb-6836c9147538.png)
+
