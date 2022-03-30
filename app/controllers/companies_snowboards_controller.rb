@@ -24,6 +24,12 @@ class CompaniesSnowboardsController < ApplicationController
     redirect_to "/companies/#{company.id}/snowboards"
   end
 
+  def destroy
+    snowboard = Snowboard.find(params[:id])
+    snowboard.destroy
+    redirect_to "/snowboards"
+  end
+
   private
 
      def snowboard_params

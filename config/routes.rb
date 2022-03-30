@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   delete '/snowboards/:id', to: 'snowboards#destroy'
   get '/snowboards/:id/edit', to: 'snowboards#edit'
   get '/snowboards/:id', to: 'snowboards#show'
+  delete '/companies/:id/snowboards/:id', to: 'companies_snowboards#destroy'
   get '/companies/:id/snowboards/new', to: 'companies_snowboards#new'
   get '/companies/:id/snowboards?sort=length', to: 'companies_snowboards#index'
   get '/companies/:id/snowboards?sort=alpha', to: 'companies_snowboards#alphabetize'

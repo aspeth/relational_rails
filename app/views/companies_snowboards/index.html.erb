@@ -6,6 +6,7 @@
   <p>Rips in pow? <%= snowboard.powder_board %></p>
   <p>Length <%= snowboard.length %></p>
   <a href="/snowboards/<%= snowboard.id %>/edit"> Edit <%= snowboard.name %></a>
+  <%= link_to "Delete #{snowboard.name}", "/companies/#{@company.id}/snowboards/#{snowboard.id}", method: :delete %>
 </div>
 <% end %>
 
