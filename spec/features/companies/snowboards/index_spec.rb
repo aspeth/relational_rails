@@ -103,12 +103,26 @@ RSpec.describe "/companies/:id/snowboards" do
       click_link("Edit #{@big_gun.name}")
       expect(current_path).to eq("/snowboards/#{@big_gun.id}/edit")
     end
-
+    
     visit "/companies/#{@burton.id}/snowboards"
     within "#board-#{@fish.id}" do
       expect(page).to have_link("Edit #{@fish.name}")
       click_link("Edit #{@fish.name}")
       expect(current_path).to eq("/snowboards/#{@fish.id}/edit")
     end
+  end
+  
+  it 'has a form to filter by minimum value' do
+    visit "/companies/#{@never_summer.id}/snowboards"
+    expect(page).to have_content("Only return records with length greater than:")
+    expect(page).to have_content(@insta_gator.name)
+    expect(page).to have_content(@big_gun.name)
+    
+    fill_in 'Length', with: '157'
+    click_on("Only return records with length greater than: 157")
+    
+    expect(page).to have_content(@big_gun.name)
+    expect(page).to_not have_content(@insta_gator.name)
+    expect(current_path).to eq("/companies/#{@never_summer.id}/snowboards")
   end
 end
