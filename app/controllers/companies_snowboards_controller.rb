@@ -3,6 +3,9 @@ class CompaniesSnowboardsController < ApplicationController
     if params[:sort] == "alpha"
       @company = Company.find(params[:id])
       @snowboards = @company.alphabetize
+    elsif params[:length]
+      @company = Company.find(params[:id])
+      @snowboards = @company.sort_by_length(params[:length])
     else
       @company = Company.find(params[:id])
       @snowboards = @company.snowboards

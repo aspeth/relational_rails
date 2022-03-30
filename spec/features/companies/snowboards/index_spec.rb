@@ -114,12 +114,13 @@ RSpec.describe "/companies/:id/snowboards" do
   
   it 'has a form to filter by minimum value' do
     visit "/companies/#{@never_summer.id}/snowboards"
-    expect(page).to have_content("Only return records with length greater than:")
+    
+    expect(page).to have_button("Only return records with length greater than")
     expect(page).to have_content(@insta_gator.name)
     expect(page).to have_content(@big_gun.name)
     
-    fill_in 'Length', with: '157'
-    click_on("Only return records with length greater than: 157")
+    fill_in 'length', with: '157'
+    click_on("Only return records with length greater than")
     
     expect(page).to have_content(@big_gun.name)
     expect(page).to_not have_content(@insta_gator.name)

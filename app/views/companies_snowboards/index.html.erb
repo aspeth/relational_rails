@@ -8,5 +8,11 @@
   <a href="/snowboards/<%= snowboard.id %>/edit"> Edit <%= snowboard.name %></a>
 </div>
 <% end %>
+
+<%= form_with url: "/companies/#{@company.id}/snowboards?sort=length", method: :get, local: true do |form| %>
+  <%= form.submit "Only return records with length greater than" %>
+  <%= form.text_field :length %>
+<% end %>
+
 <a href="/companies/<%= @company.id %>/snowboards/new"> New Snowboard </a>
 <br><a href="/companies/<%= @company.id %>/snowboards?sort=alpha"> Alphabetize </a>

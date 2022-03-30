@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   get '/snowboards/:id/edit', to: 'snowboards#edit'
   get '/snowboards/:id', to: 'snowboards#show'
   get '/companies/:id/snowboards/new', to: 'companies_snowboards#new'
-  get '/companies/:id/snowboards?sort=alpha"', to: 'companies_snowboards#alphabetize'
+  get '/companies/:id/snowboards?sort=length', to: 'companies_snowboards#index'
+  get '/companies/:id/snowboards?sort=alpha', to: 'companies_snowboards#alphabetize'
   get '/companies/:id/snowboards', to: 'companies_snowboards#index'
   post '/companies/:id/snowboards', to: 'companies_snowboards#create'
 end

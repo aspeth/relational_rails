@@ -17,7 +17,10 @@ class Company < ApplicationRecord
   end
 
   def alphabetize
-    alpha_list = snowboards.order(:name)
-    alpha_list
+    snowboards.order(:name)
+  end
+
+  def sort_by_length(length)
+    snowboards.where("length > #{length}")
   end
 end

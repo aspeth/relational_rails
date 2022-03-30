@@ -20,7 +20,6 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    # require "pry"; binding.pry
     company = Company.find(params[:id])
     company.update({
       name: params[:name],
