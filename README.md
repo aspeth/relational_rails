@@ -45,6 +45,6 @@ Start the Rails Server
 rails s
 ```
 
-# Open http://localhost:3000/ in a web browswer (Chrome and Safari work for sure, I haven't tested any others but they may work)
+#### Open http://localhost:3000/ in a web browswer (Chrome and Safari work for sure, I haven't tested any others but they may work)
 
 Click around and do the stuff!
